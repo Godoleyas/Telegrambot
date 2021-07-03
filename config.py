@@ -1,10 +1,19 @@
-import  os
-
-BOT_TOKEN = os.environ.get("1849971418:AAFVUhK9ThvVv_MZdFWHt6SETFMjMSMXPTI")
-APP_ID = int(os.environ.get("1378165"))
-API_HASH = os.environ.get("dd2e80c7745fa709a04842c081db3bc8")
-
-youtube_next_fetch = 0  # time in minute
+import os
 
 
-EDIT_TIME = 5
+def init_log() -> int:
+    return (
+        int(log_group)  # type: ignore
+        if (log_group := os.environ.get("LOG_GROUP")) is not None
+        else None
+    )
+
+
+class Config:
+    BOT_TOKEN = os.environ["BOT_TOKEN"]
+    API_ID = int(os.environ["API_ID"])
+    API_HASH = os.environ["API_HASH"]
+    EXEC_PATH = os.environ.get("GOOGLE_CHROME_SHIM", None)
+    # OPTIONAL
+    LOG_GROUP = init_log()
+    SUPPORT_GROUP_LINK = os.environ.get("SUPPORT_GROUP", "https://t.me/webdevchat")
