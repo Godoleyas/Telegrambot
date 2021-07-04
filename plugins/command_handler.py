@@ -1,4 +1,4 @@
-# (c) AlenPaulVarghese
+# (c) Papy
 # -*- coding: utf-8 -*-
 
 from config import Config
@@ -51,23 +51,23 @@ async def start(_, message: Message) -> None:
 @WebshotBot.on_message(filters.command(["about", "feedback"]))
 async def feedback(_, message: Message) -> None:
     await message.reply_text(
-        text="This project is open ❤️ source",
+        text="This project is open source",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "👨🏻‍🦯 Source",
-                        url="https://github.com/alenpaul2001/Web-Screenshot-Bot",
+                        "Channel",
+                        url="https://github.com/t.me/PapyProjects",
                     ),
                     InlineKeyboardButton(
                         "❓ Bug Report",
-                        url="https://github.com/alenpaul2001/Web-Screenshot-Bot/issues",
+                        url="https://telegram.me/PapyProjectsbot",
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌃 Profile Icon Credit",
-                        url="https://www.goodfon.com/wallpaper/art-vector-background-illustration-minimalism-angga-tanta-12.html",
+                        "Support Group",
+                        url="https://telegram.me/Webdevchat",
                     )
                 ],
             ]
